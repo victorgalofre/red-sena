@@ -1,0 +1,22 @@
+[build]
+  base = "client"
+  publish = "build"
+  command = "npm ci && npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+  CI = "true"
+  NPM_FLAGS = "--no-audit"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  CI = "true"
+
+[context.deploy-preview]
+  command = "npm ci && npm run build"
+
+[context.branch-deploy]
+  command = "npm ci && npm run build"
+
+[context.production]
+  command = "npm ci && npm run build"
