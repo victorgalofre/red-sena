@@ -22,7 +22,6 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
-    "concurrently": "^8.2.1",
-    "@vercel/static-build": "^0.1.1"
+    "concurrently": "^8.2.1"
   }
 }
